@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BTIScanVC : UIViewController
+@interface BTIScanVC : UIViewController <ZBarReaderViewDelegate, UIAlertViewDelegate>
+{
+    BOOL isShown;
+}
+
+@property (nonatomic, readonly, strong) ZBarCameraSimulator *cameraSim;
+@property (nonatomic, readonly, strong) IBOutlet ZBarReaderView *readerView;
+@property (weak, nonatomic) IBOutlet UIImageView *viewFinderImage;
 
 @end
