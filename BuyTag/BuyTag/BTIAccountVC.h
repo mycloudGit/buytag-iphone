@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTIViewController.h"
 
-@interface BTIAccountVC : UIViewController
+@interface BTIAccountVC : BTIViewController
 
 @end

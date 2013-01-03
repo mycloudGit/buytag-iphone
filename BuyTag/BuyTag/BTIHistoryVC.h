@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTIViewController.h"
 
-@interface BTIHistoryVC : UIViewController
+@interface BTIHistoryVC : BTIViewController
 
 @end

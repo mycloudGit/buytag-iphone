@@ -36,6 +36,7 @@
 		C6F368A916962F5A00C7F236 /* ReaderSquare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F368A816962F5A00C7F236 /* ReaderSquare@2x.png */; };
 		C6F368AC169630C300C7F236 /* ReaderSquareOn.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F368AA169630C300C7F236 /* ReaderSquareOn.png */; };
 		C6F368AD169630C300C7F236 /* ReaderSquareOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F368AB169630C300C7F236 /* ReaderSquareOn@2x.png */; };
+		C6F368B0169644D200C7F236 /* BTIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F368AF169644D200C7F236 /* BTIViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		C6F368A816962F5A00C7F236 /* ReaderSquare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ReaderSquare@2x.png"; path = "Images/ReaderSquare@2x.png"; sourceTree = "<group>"; };
 		C6F368AA169630C300C7F236 /* ReaderSquareOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ReaderSquareOn.png; path = Images/ReaderSquareOn.png; sourceTree = "<group>"; };
 		C6F368AB169630C300C7F236 /* ReaderSquareOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ReaderSquareOn@2x.png"; path = "Images/ReaderSquareOn@2x.png"; sourceTree = "<group>"; };
+		C6F368AE169644D200C7F236 /* BTIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIViewController.h; sourceTree = "<group>"; };
+		C6F368AF169644D200C7F236 /* BTIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIViewController.m; sourceTree = "<group>"; };
 		D6DE2244DFED4232ABA1C7AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,6 +166,8 @@
 				C6F3682E1695D74B00C7F236 /* BTIHistoryVC.m */,
 				C6F3686B169603A600C7F236 /* BTITabBarController.h */,
 				C6F3686C169603A600C7F236 /* BTITabBarController.m */,
+				C6F368AE169644D200C7F236 /* BTIViewController.h */,
+				C6F368AF169644D200C7F236 /* BTIViewController.m */,
 			);
 			name = Classes;
 			path = BuyTag;
@@ -359,6 +364,7 @@
 				C6F3682F1695D74B00C7F236 /* BTIHistoryVC.m in Sources */,
 				C6F368531695DCD400C7F236 /* BTIScanVC.m in Sources */,
 				C6F3686D169603A600C7F236 /* BTITabBarController.m in Sources */,
+				C6F368B0169644D200C7F236 /* BTIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

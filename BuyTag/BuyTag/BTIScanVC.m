@@ -33,7 +33,7 @@
     [self.readerView willRotateToInterfaceOrientation: app.statusBarOrientation duration: 0];
     self.readerView.readerDelegate = self;
     self.readerView.tracksSymbols = NO;
-    
+    self.readerView.torchMode = 0;
     [self setupScanner];
     
     if(TARGET_IPHONE_SIMULATOR) {

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BTIScanVC : UIViewController <ZBarReaderViewDelegate, UIAlertViewDelegate>
+#import "BTIViewController.h"
+@interface BTIScanVC : BTIViewController <ZBarReaderViewDelegate, UIAlertViewDelegate>
 {
     BOOL isShown;
 }

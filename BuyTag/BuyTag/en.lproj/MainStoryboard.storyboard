@@ -44,8 +44,16 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="first" id="7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="gXG-Od-frM"/>
-                <swipeGestureRecognizer direction="left" id="l8i-Tx-RaE"/>
+                <swipeGestureRecognizer direction="right" id="gXG-Od-frM">
+                    <connections>
+                        <action selector="swipeRight:" destination="2" id="Qz6-fd-I0W"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="l8i-Tx-RaE">
+                    <connections>
+                        <action selector="swipeLeft:" destination="2" id="40y-Bw-GdP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
@@ -57,7 +65,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0H-F5-FxY" customClass="ZBarReaderView">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0H-F5-FxY" customClass="ZBarReaderView">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="ReaderSquare.png" translatesAutoresizingMaskIntoConstraints="NO" id="gIZ-5f-DUn">
@@ -76,6 +84,10 @@
                             <constraint firstItem="v0H-F5-FxY" firstAttribute="bottom" secondItem="7QX-9k-DEh" secondAttribute="bottom" type="default" id="wV3-Bu-ww8"/>
                             <constraint firstItem="v0H-F5-FxY" firstAttribute="trailing" secondItem="7QX-9k-DEh" secondAttribute="trailing" type="default" id="zQW-GA-9CP"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lQM-cA-4t1" appends="YES" id="PAi-Bt-AdZ"/>
+                            <outletCollection property="gestureRecognizers" destination="OB9-0V-7xb" appends="YES" id="Kfl-q6-kR6"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="second" id="6"/>
                     <connections>
@@ -84,8 +96,16 @@
                         <outlet property="viewFinderImage" destination="gIZ-5f-DUn" id="sNC-iN-2Bw"/>
                     </connections>
                 </viewController>
-                <swipeGestureRecognizer direction="left" id="lQM-cA-4t1"/>
-                <swipeGestureRecognizer direction="right" id="OB9-0V-7xb"/>
+                <swipeGestureRecognizer direction="left" id="lQM-cA-4t1">
+                    <connections>
+                        <action selector="swipeLeft:" destination="3" id="Rah-LQ-qFW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="OB9-0V-7xb">
+                    <connections>
+                        <action selector="swipeRight:" destination="3" id="yFa-ir-zGc"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
@@ -141,11 +161,23 @@
                             <constraint firstItem="cqp-hF-rII" firstAttribute="top" secondItem="Byj-Xh-wwU" secondAttribute="bottom" constant="40" type="user" id="rc7-ZI-qum"/>
                             <constraint firstAttribute="trailing" secondItem="cqp-hF-rII" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ucd-Zc-LSk"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zRH-ra-mOg" appends="YES" id="ur2-du-46h"/>
+                            <outletCollection property="gestureRecognizers" destination="7nn-qY-OFj" appends="YES" id="d6R-sR-Vvk"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="first.png" id="7ld-qW-ifl"/>
                 </viewController>
-                <swipeGestureRecognizer direction="left" id="7nn-qY-OFj"/>
-                <swipeGestureRecognizer direction="right" id="zRH-ra-mOg"/>
+                <swipeGestureRecognizer direction="left" id="7nn-qY-OFj">
+                    <connections>
+                        <action selector="swipeLeft:" destination="z5E-hF-cGx" id="jJG-lN-IC4"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="zRH-ra-mOg">
+                    <connections>
+                        <action selector="swipeRight:" destination="z5E-hF-cGx" id="m07-lR-Fad"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1OZ-T7-TPJ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="1172"/>
@@ -158,13 +190,13 @@
         <image name="second" width="16" height="16"/>
     </resources>
     <classes>
-        <class className="BTIAccountVC" superclassName="UIViewController">
+        <class className="BTIAccountVC" superclassName="BTIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BTIAccountVC.h"/>
         </class>
-        <class className="BTIHistoryVC" superclassName="UIViewController">
+        <class className="BTIHistoryVC" superclassName="BTIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BTIHistoryVC.h"/>
         </class>
-        <class className="BTIScanVC" superclassName="UIViewController">
+        <class className="BTIScanVC" superclassName="BTIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BTIScanVC.h"/>
             <relationships>
                 <relationship kind="outlet" name="readerView" candidateClass="ZBarReaderView"/>
@@ -173,6 +205,13 @@
         </class>
         <class className="BTITabBarController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BTITabBarController.h"/>
+        </class>
+        <class className="BTIViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BTIViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="swipeLeft:" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="action" name="swipeRight:" candidateClass="UIGestureRecognizer"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

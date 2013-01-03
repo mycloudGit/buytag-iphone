@@ -10,4 +10,6 @@
 
 @interface BTITabBarController : UITabBarController <UITabBarControllerDelegate>
 
+- (void) showViewController:(UIViewController *)viewController;
+
 @end
